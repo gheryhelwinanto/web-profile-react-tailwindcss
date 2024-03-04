@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+
+.firstline {
+  animation: fading 2s ease-in-out 2500ms 1 forwards;
+}
+
+@keyframes fading {
+  from {
+    translate: 0 0;
+    opacity: 0;
+  }
+  to {
+    translate: 36rem 0;
+    opacity: 1;
+  }
+}
+
+.secondline {
+  animation: fading 2s ease-in-out 3s 1 forwards;
+}
+
+.thirdline {
+  animation: fading 2s ease-in-out 3500ms 1 forwards;
+}
+
+.fourtline {
+  animation: fading 2s ease-in-out 4s 1 forwards;
+}
+
+.dropdown {
+  animation: dropping 1s ease-in-out 2s alternate;
+}
+
+@keyframes dropping {
+  from {
+    translate: 0 0;
+    opacity: 0;
+  }
+  to {
+    translate: 0 -36rem;
+    opacity: 1;
+  }
+}
+
+@tailwind utilities;
+
+@layer components {
+  .card {
+    @apply flex flex-col gap-1 justify-center  bg-white shadow-lg  font-comforta text-sm;
+  }
+}
